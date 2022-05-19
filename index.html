@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Upload image/images using Multer & Cloudinary</title>
+</head>
+
+<body>
+    <div style="margin-top: 30px; margin-left: 30px;">
+        <!--UPLOAD SINGLE FILE-->
+        <form action="/upload_image" method="post" enctype="multipart/form-data">
+            <div class="custom-file mb-3">
+                <label for="image" class="custom-file-upload" style="width: 200px ;">
+                    <strong>Upload single
+                        image</strong></label>
+                <input type="file" id="image" name="image" class="file-upload">
+                <input type="submit" class="btn btn-primary" value="Upload">
+            </div>
+        </form>
+        <!--UPLOAD MULTIPLE FILES-->
+        <form action="/upload_images" method="post" enctype="multipart/form-data">
+            <div class="custom-file mb-3">
+                <label for="images" class="custom-file-upload" style="width: 200px ;">
+                    <strong>Upload multiple
+                        images</strong></label>
+                <input type="file" id="images" name="images" class="file-upload" multiple>
+                <input type="submit" class="btn btn-primary" value="Upload">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
