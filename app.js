@@ -46,9 +46,10 @@ cloudinary.config({
 });
 
 const uploads = async (file, folder) => {
+  //able to upload local file, a remote URL, or a private storage URL (Amazon S3 or Google Cloud)
   return await cloudinary.uploader.upload(
     file,
-    { folder: folder },
+    { folder: folder , transformation: { width: 2000, height: 1000, crop: "limit" } },
     (err, result) => {
       if (err) console.log("Error occured: ", err);
       return result;
